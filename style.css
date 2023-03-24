@@ -61,6 +61,9 @@ h2 {
   break-before: page;
 }
 
+p {
+  font-size: large;
+}
 @media print {
   body {
     background: white;
