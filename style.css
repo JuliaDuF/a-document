@@ -60,6 +60,22 @@ body {
 }
 
 p {
+  
+  font-family: 'Syne Mono', monospace;
+  color: rgb(85, 85, 85);
+  font-size: 0.9rem;
+  break-before: page;
+  background-image: linear-gradient(to right, 
+          #9AE7FF 15%, 
+          #81ACFF 30%, 
+          #DEB4FF 70%);
+          background-size: 100%;
+          background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent; -moz-background-clip: text;-moz-text-fill-color: transparent;
+  padding-bottom: 1rem;
+  
+}
+
+.story {
   font-family: 'Syne Mono', monospace;
   color: rgb(85, 85, 85);
   font-size: 0.9rem;
@@ -67,7 +83,7 @@ p {
 
 @page {
   size: 5in 8in;
-  margin-top: 0.25in;
+  margin-top: 0.5in;
   margin-bottom: 0.5in;
 }
 @page:left {
@@ -83,7 +99,7 @@ p {
 }
 @page:right {
   margin-left: 1in;
-  margin-right: 0.25in;
+  margin-right: 1in;
  
   @bottom-left {
     content:"JULIA DU";
@@ -106,14 +122,12 @@ p {
 }
 
 @media print {
-  body {
+  html {
     background: white;
   }
   }
 
 button {
-    background: hsl(340deg 100% 32%);
-    border-radius: 12px;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -126,15 +140,24 @@ button {
   .front {
     display: block;
     padding: 12px 42px;
-    border-radius: 12px;
-    font-size: 1.25rem;
-    background: hsl(345deg 100% 47%);
+    font-size: 0.8rem;
+    background: hsl(0, 0%, 12%);
     color: white;
     transform: translateY(-7px);
     font-family: 'DotGothic16', sans-serif;
+    
   }
   
 .title {
   font-size: 3rem;
   font-family: 'Libre Barcode 39 Text', cursive;
+  margin-top: 0.5rem;
+}
+
+img {
+  width:100%;
+  border-radius: 100%;
+    position: absolute;
+    bottom: 40px;
+    box-shadow: 0 0 50px 10px #344652;
 }
