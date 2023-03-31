@@ -60,7 +60,9 @@ body {
 }
 
 p {
-  font-size: large;
+  font-family: 'Syne Mono', monospace;
+  color: rgb(85, 85, 85);
+  font-size: 0.9rem;
 }
 
 @page {
