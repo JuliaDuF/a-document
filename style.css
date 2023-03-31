@@ -49,25 +49,18 @@ table {
 
 
 
-
-
-body {
-  font-family: sans-serif;
-  background: lightgray;
-  counter-reset: page;
+html {
+  background-color: black;
 }
 
-h2 {
-  break-before: page;
+body {
+  counter-reset: page;
+  font-family: 'Syne Mono', monospace;
+  color: rgb(85, 85, 85);
 }
 
 p {
   font-size: large;
-}
-@media print {
-  body {
-    background: white;
-  }
 }
 
 @page {
@@ -76,20 +69,19 @@ p {
   margin-bottom: 0.5in;
 }
 @page:left {
-  margin-left: 0.25in;
+  margin-left: 1in;
   margin-right: 1in;
 
   @bottom-left {
     content: counter(page);
   }
   @bottom-right {
-    content:"What is document?";
+    content:"Story of Workshop F";
   }
 }
 @page:right {
   margin-left: 1in;
   margin-right: 0.25in;
-  
  
   @bottom-left {
     content:"JULIA DU";
@@ -100,7 +92,47 @@ p {
 
 }
 
+
 .two-col {
   column-count: 3;
   column-gap: 2em;
+}
+
+.Text {
+  font-size:0.8rem;
+  line-height: 120%;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  }
+
+button {
+    background: hsl(340deg 100% 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-7px);
+    font-family: 'DotGothic16', sans-serif;
+  }
+  
+.title {
+  font-size: 3rem;
+  font-family: 'Libre Barcode 39 Text', cursive;
 }
